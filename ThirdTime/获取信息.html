@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWord</title>
+
+  <script type="text/javascript" charset="utf-8">
+
+
+  function showInfo(){
+
+    var getSex=document.getElementsByName("sex");
+    for(var i=0;i < getSex.length;i++)
+       {
+           if(getSex[i].checked)
+           {
+               sex1 = getSex[i].value;
+              // alert(i);
+           }
+       }
+
+    var getAh = document.getElementsByName("a");
+    var Ah=new Array();
+   for (var j = 0 ; j < getAh.length ;j++){
+       if(getAh[j].checked)
+         {
+             Ah[j] = getAh[j].value;
+            //  alert(getAh[j].value)
+
+         }
+}
+       var name =  + document.getElementById("name").value;
+       if(name == "")
+       name = "无名氏";
+       var xl = document.getElementById('xl').value;
+      //  alert(xl);
+      var s = confirm("请确认下你的信息\u000d"  + "你的姓名是:" + name + "\u000d"+"你你你你竟然是" + sex1 + "的！\u000d" + xl + "生，惹不起惹不起。\u000d" + "您的爱好是：" + Ah.toString()  );
+
+
+
+
+
+  }
+
+  </script>
+</head>
+<body>
+<h1>在线调查</h1>
+名字: <input type="text" id = "name" ></input></br>
+性别:&nbsp&nbsp&nbsp
+ 男<input type="radio" name = "sex" id = "sexs" value = "男"></input>
+  女<input type="radio" name = "sex" id = "sexs" value="女"></input></br>
+学历：
+  <select name="xl" id = "xl">
+  <option value="博士">博士</option>
+  <option value="本科">本科</option>
+  <option value="高中">高中</option>
+  <option value="初中">初中</option>
+  </select></br>
+业余爱好：
+<input type="checkbox" name = "a" value = "跑步" >跑步</input>
+<input type="checkbox" name = "a" value = "游泳">游泳</input>
+<input type="checkbox" name = "a" value = "写代码">写代码</input>
+<input type="checkbox" name = "a" value = "读书">读书</input>
+<input type="checkbox" name = "a" value = "学习">学习</input>
+<input type="checkbox" name = "a" value = "游戏">游戏</input><br /><br />
+<input type="submit"  value = "提交" onclick="showInfo()"></input>
+
+</body>
+</html>

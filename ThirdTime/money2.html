@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWord</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" charset="utf-8">
+function sum(){
+  //x = document.getElementById('a').checked;
+//  y = document.getElementById('b').checked;
+//  z = document.getElementById('c').checked;
+  if(document.getElementById('a').value != 0)
+    var apple = document.getElementById('a').value * 59;
+  else apple = 0;
+  if(document.getElementById('b').value != 0)
+    var orange = document.getElementById('b').value * 49;
+  else orange = 0;
+  if(document.getElementById('c').value != 0)
+    var xj = document.getElementById('c').value * 39;
+ else xj = 0;
+//  totle =eval( parseFloat(apple) + parseFloat(orange) + parseFloat(xj) );
+ss = parseFloat(apple) + 0.05 * parseFloat(apple) +  parseFloat(orange) + 0.05 *  parseFloat(orange) + parseFloat(xj) + 0.05 * parseFloat(xj) ;
+  //alert(eval(apple + orange + xj));
+alert("The totle price is "+ss);
+//  alert(document.getElementById('a').checked);
+//string
+
+}
+  </script>
+</head>
+<body>
+<form>
+苹果:
+<input type="text" value="0" id = "a">$</input></br>
+橘子:
+<input type="text" value="0" id = "b">$</input></br>
+香蕉:
+<input type="text" value="0" id = "c">$</input></br>
+<input type="button" value="计算一下" id = "s" onclick="sum()"></input>
+</form>
+
+
+
+
+
+
+</body>
+</html>
