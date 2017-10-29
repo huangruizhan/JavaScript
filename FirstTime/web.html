@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >wolcome</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<script type="text/javascript">
+function number(num)
+{
+
+  jisuan.display.value=jisuan.display.value+num;
+  var disNum = document.getElementById("dis").value;
+  if(disNum == 0)
+    dis="";
+  disNum += num;
+}
+function result(){
+   jisuan.display.value = eval(jisuan.display.value);
+   }
+</script>
+</head>
+<body>
+  <div>
+<table border="1">
+  <form name="jisuan">
+
+
+    <tr>
+      <td  colspan="4"><input  type=text    id="dis" name="display"  ></td>
+    </tr>
+
+  <tr>
+    <td ><input name="a" type="button" value="1"  id="1"  onclick="number('1')"/></td>
+    <td><input name="b" type="button" value="2" onclick="number('2')"></td>
+    <td><input name="3" type="button" value="3" onclick="number('3')"></td>
+    <td><input name="d" type="button" value="+" onclick="number('+')"/></td>
+  </tr>
+
+  <tr>
+    <td><input name="4" type="button" value="4" onclick="number(4)"></td>
+    <td><input name="5" type="button" value="5" onclick="number(5)"></td>
+    <td><input name="6" type="button" value="6" onclick="number(6)"></td>
+    <td><input name="-" type="button" value="-" onclick="number('-')"></td>
+  </tr>
+
+  <tr>
+    <td><input name="7" type="button" value="7" onclick="number(7)"></td>
+    <td><input name="8" type="button" value="8" onclick="number(8)"></td>
+    <td><input name="9" type="button" value="9" onclick="number(9)"></td>
+    <td><input name="*" type="button" value="*" onclick="number('*')"></td>
+  </tr>
+
+  <tr>
+    <td><input name="0" type="button" value="0" onclick="number(0)"></td>
+    <td><input name="/" type="button" value="/" onclick="number('/')"></td>
+    <td><input name="C" type="reset" value="C" onclick="number(C)"/></td>
+    <td><input name="=" type="button" value="=" onclick="result()"/></td>
+  </tr>
+</form>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
