@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>验证表单内容</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/mr-basic.css"/>
+    <link href="css/mr-login.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+<div class="res-banner">
+    <div class="res-main">
+        <div class="login-box" style="right:30%">
+            <div class="mr-tabs" id="doc-my-tabs">
+                <ul class="mr-tabs-nav mr-nav mr-nav-tabs mr-nav-justify">
+                    <li class="mr-active"><a href="">验证表单内容</a></li>
+                </ul>
+
+                <div class="mr-tabs-bd">
+                    <div class="mr-tab-panel mr-active">
+                        <form method="post">
+
+                            <div class="user-email">
+                                <label for="email"><i class="mr-icon-envelope-o"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="email" name="" id="email" placeholder="请输入邮箱账号">
+                            </div>
+                            <div class="user-pass">
+                                <label for="password"><i class="mr-icon-lock"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="password" name="" id="password" placeholder="设置密码">
+                            </div>
+                            <div class="user-pass">
+                                <label for="passwordRepeat"><i class="mr-icon-lock"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="password" name="" id="passwordRepeat" placeholder="确认密码">
+                            </div>
+
+                            <div class="user-pass">
+                                <label for="passwordRepeat"><i class="mr-icon-mobile"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="text" name="" id="tel" placeholder="请输入手机号">
+                            </div>
+
+                        </form>
+
+                        <div class="login-links">
+                            <label for="reader-me">
+                                <input id="reader-me" type="checkbox"> 点击表示您同意商城《服务协议》
+
+                            </label>
+                        </div>
+                        <div class="mr-cf">
+                            <input type="submit" onclick="loss()" value="注册" class="mr-btn mr-btn-primary mr-btn-sm mr-fl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+//填写不完整报错！
+      function loss(){
+
+       if(document.getElementById('email').value == "")
+          {
+            alert("叫你输入邮箱账号，你会不会啊！")
+
+            return;
+          }
+    //验证是否有@或者是.
+    var a = document.getElementById('email');
+    var at = document.getElementById('email').value.indexOf("@")
+    var dot = document.getElementById('email').value.indexOf(".");
+    if(at<1 || dot - at <2)
+    {
+      alert("格式是不是打错了？")
+      return;
+    }
+
+        if(document.getElementById('password').value == "")
+          {  alert("密码呢?密码呢？");
+             return;
+          }
+        if(document.getElementById('passwordRepeat').value == "")
+          {  alert("验证下密码，老哥！");
+             return;
+          }
+        if (document.getElementById('tel').value == "")
+      {      alert("手机号忘填了");
+             return;
+          }
+//验证两次密码是否相同。
+      if(document.getElementById('password').value != document.getElementById('passwordRepeat').value )
+{
+   alert("两次输入的密码不一样啊！");return;
+}
+//验证手机号：
+      var phone = document.getElementById('tel').value;
+//alert(phone);
+      if(document.getElementById('tel').value.length != 11)
+      {
+          alert("请输入11位数手机号码！");  return;
+
+        }
+        for(var i = 0 ;i <= 10 ;i++)
+        {
+            if(phone.charAt(i) == 0 || phone.charAt(i) == '1' || phone.charAt(i) == '3' || phone.charAt(i) == '4' || phone.charAt(i) == '5' ||
+              phone.charAt(i) == '6' || phone.charAt(i) == '7'  || phone.charAt(i) == '8' || phone.charAt(i) == '9' ||  phone.charAt(i) == '2'  )
+              document.write="";
+              else {
+                alert("请不要输入数字以外的字符！");   return;
+              }
+        }
+//checke box!
+//alert(document.getElementById("reader-me").value);
+      if(document.getElementById("reader-me").checked){
+        document.write="";
+        }
+        else{
+           alert("请同意一下我们的流氓协议。");
+            return;
+          }
+
+        if(1){
+
+            alert("恭喜你，成为我们的羊毛。");
+        }
+
+
+}
+
+    </script>
+</body>
+
+</html>

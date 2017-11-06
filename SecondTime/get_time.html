@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWord</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" charset="utf-8">
+    var t = self.setInterval("getTime()",50);
+    function getTime(){
+      var a=new Date();
+      var h=a.getHours();
+      var m=a.getMinutes();
+      var s=a.getSeconds();
+      m=checkTime(m)
+      s=checkTime(s)
+      function checkTime(i)
+      {
+        if (i<10)
+        {i="0" + i}
+        return i
+      }
+      checkTime();
+    //  document.getElementById('clock').innerHTML=(a);
+    document.getElementById('clock').innerHTML=h+":"+m+":"+s;
+    }
+
+
+  </script>
+</head>
+<body >
+  <p style="color:red; font-size:20px;"   id = clock></p>
+  <button id="stop" type ="botton" onclick="t=window.clearInterval(t)">停止时间</button>
+
+
+
+
+
+
+
+</body>
+</html>

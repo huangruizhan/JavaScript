@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWord</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<div  id = "flush"></div>
+
+
+<script type="text/javascript" charset="utf-8">
+/*function titleInfo()
+{
+
+const OriginTitle = document.title;
+
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        document.title = '哎呀，浏览器崩溃啦!';
+    } else {
+        document.title = '又好了嘻嘻：)';
+        setTimeout(function() { document.title = "HelloWord";
+        }, 2000);
+    } });
+}
+titleInfo();*/
+
+function img(){
+var num = Math.ceil(Math.random()*11);
+var num1 =' src = "./images/' + num + '.jpg"';
+document.getElementById("flush").innerHTML= '<img'  + num1 + '/>' ;
+//document.write('<img'+num1 + '/>');
+}
+img();
+var t = self.setInterval("img()",1000);
+//<img src="0929[00_01_11][20150929-123709-6].JPG">
+//<img  src="./1.jpg">
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

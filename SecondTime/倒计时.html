@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWord</title>
+  <meta charset = utf-8>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+  //距离2018.2.16还有 多少天。
+	function backt(){
+	var s1 = new Date("2018-02-16 00:00:00" );
+	var s2 = new Date();
+	s2.toLocaleDateString();
+	//alert(s2);
+	d = 60*60*24*1000;
+	var s3 = (s1-s2)/d;
+	//alert(s3);
+	document.write("距离2018结束还有:"+parseInt(s3)+"天");
+	}
+  backt();
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+  <script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

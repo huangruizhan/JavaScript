@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+  <script type="text/javascript">
+    // 新窗口打开时弹出确认框，是否打开
+    // 通过输入对话框，确定打开的网址，默认为 http：//www.baidu.com/
+    //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+    function openWindow(){
+      var  r=confirm("确定要打开新窗口吗？");
+      if(r == true)
+      {
+        var url=prompt("请输入要打开的网址！","");
+        //alert(url)
+          if(!url)
+          {
+            return;
+          }
+          if(url)
+            alert('正在跳转至：'+url);
+            else {
+              alert("请重新输入");
+              return;
+            }
+            url = "http://" + url;
+            window.open(url,"_blank","toolbar=yes,  menubar=yes, width=400, height=400");
+      }
+
+
+
+    }
+
+  </script>
+ </head>
+
+ <body>
+	  <input type="button" value="新窗口打开网站" onclick="openWindow()" />
+ </body>
+</html>
